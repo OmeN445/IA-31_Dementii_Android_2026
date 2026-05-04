@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Інженерний рівень"
+        android:textColor="#263238"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Поле рівня -->
+    <FrameLayout
+        android:id="@+id/levelFrame"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:elevation="8dp">
+
+        <!-- Розмітка центру -->
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#CFD8DC" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:background="#CFD8DC" />
+
+        <!-- Бульбашка -->
+        <View
+            android:id="@+id/bubble"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bubble_shape" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/levelFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="X: 0.00 | Y: 0.00"
+        android:textColor="#455A64"
+        android:textSize="18sp" />
+
+</RelativeLayout>
